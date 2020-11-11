@@ -14,7 +14,7 @@ source:
     - a2x.patch
 
 build:
-  number: 1002
+  number: 1003
   skip: true  # [win or py3k]
 
 requirements:
