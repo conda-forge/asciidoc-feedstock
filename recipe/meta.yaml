@@ -1,6 +1,6 @@
 {% set name = "asciidoc" %}
-{% set version = "8.6.10" %}
-{% set sha256 = "9e52f8578d891beaef25730a92a6e723596ddbd07bfe0d2a56486fcf63a0b983" %}
+{% set version = "9.1.0" %}
+{% set sha256 = "5056c20157349f8dc74f005b6e88ccbf1078c4e26068876f13ca3d1d7d045fe7" %}
 
 package:
   name: {{ name|lower }}
@@ -14,11 +14,11 @@ source:
     - a2x.patch
 
 build:
-  number: 1002
+  number: 0
   skip: true  # [win or py3k]
 
 requirements:
-  build:
+  host:
     - libxml2
     - libxslt
     - python
@@ -39,8 +39,8 @@ about:
   home: https://github.com/asciidoc
   license: GPL-2.0
   license_family: GPL
-  license_file: 'COPYING'
-  summary: 'Text based document generation'
+  license_file: COPYING
+  summary: Text based document generation
 
   description: |
     AsciiDoc is a text document format for writing notes, documentation,
