@@ -1,6 +1,5 @@
 {% set name = "asciidoc" %}
-{% set version = "9.1.0" %}
-{% set sha256 = "5056c20157349f8dc74f005b6e88ccbf1078c4e26068876f13ca3d1d7d045fe7" %}
+{% set version = "9.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -9,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/{{ name }}/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 914dfc1542c30bd47faa0aaaae0985cb57d0ca584015729ccd1b94d90da3a616
   patches:
     - a2x.patch
 
@@ -37,7 +36,7 @@ test:
 
 about:
   home: https://github.com/asciidoc
-  license: GPL-2.0
+  license: GPL-2.0-only
   license_family: GPL
   license_file: COPYING
   summary: Text based document generation
