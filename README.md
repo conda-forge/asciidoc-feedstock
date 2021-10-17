@@ -3,7 +3,7 @@ About asciidoc
 
 Home: https://github.com/asciidoc
 
-Package license: GPL-2.0
+Package license: GPL-2.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/asciidoc-feedstock/blob/master/LICENSE.txt)
 
