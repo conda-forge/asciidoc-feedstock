@@ -1,5 +1,5 @@
 {% set name = "asciidoc" %}
-{% set version = "10.1.0" %}
+{% set version = "10.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/{{ name }}/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 9ff7bfd9ea03330bb05c8c958c699689b0cabbb7ab26660884dbc68df8744a40
+  sha256: 064e34241bd96e7239e8048596ceb03262d63145d04070d53906151f2042d007
   patches:
     - a2x.patch
 
