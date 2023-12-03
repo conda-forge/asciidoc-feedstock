@@ -7,6 +7,8 @@ Home: https://github.com/asciidoc
 
 Package license: GPL-2.0-only
 
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/asciidoc-feedstock/blob/main/LICENSE.txt)
+
 Summary: Text based document generation
 
 Development: https://github.com/asciidoc/asciidoc
@@ -163,7 +165,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
