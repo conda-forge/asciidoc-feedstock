@@ -13,8 +13,8 @@ source:
     - a2x.patch
 
 build:
-  number: 0
-  skip: true  # [win or py3k]
+  number: 1
+  skip: true  # [win or py>310]
 
 requirements:
   host:
