@@ -19,11 +19,11 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.5
+    - python {{ python_min }}
 
 test:
   imports:
@@ -34,6 +34,7 @@ test:
     - a2x --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://asciidoc.org
