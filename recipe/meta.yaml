@@ -23,7 +23,7 @@ requirements:
     - pip
     - setuptools
   run:
-    - python {{ python_min }}
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -34,7 +34,6 @@ test:
     - a2x --help
   requires:
     - pip
-    - python {{ python_min }}
 
 about:
   home: https://asciidoc.org
