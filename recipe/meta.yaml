@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/asciidoc-{{ version }}.tar.gz
-  sha256: d9f13c285981b3c7eb660d02ca0a2779981e88d48105de81bb40445e60dddb83
+  url: https://github.com/{{ name }}-py/{{ name }}-py/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 8e1fb9691952cc4f13357e1ef58172e566c5f88e3c44222d4a8693585f884507
 
 build:
   noarch: python
@@ -15,7 +15,7 @@ build:
     - asciidoc=asciidoc.asciidoc:cli
     - a2x=asciidoc.a2x:cli
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
