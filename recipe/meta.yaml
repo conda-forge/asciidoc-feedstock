@@ -13,12 +13,12 @@ source:
     - a2x.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win or py3k]
 
 requirements:
   host:
-    - libxml2
+    - libxml2-devel
     - libxslt
     - python
     - autoconf
