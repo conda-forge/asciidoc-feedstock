@@ -36,7 +36,7 @@ test:
     - asciidoc --help
     - a2x --help
     - asciidoc doc/asciidoc.txt
-    - python3 tests/testasciidoc.py update && python3 tests/testasciidoc.py run || true
+    - python tests/testasciidoc.py update && python3 tests/testasciidoc.py run || true
   requires:
     - pip
     - python {{ python_min }}
