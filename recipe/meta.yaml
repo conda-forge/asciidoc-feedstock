@@ -11,6 +11,7 @@ source:
 
 build:
   noarch: python
+  noarch: python
   entry_points:
     - asciidoc=asciidoc.asciidoc:cli
     - a2x=asciidoc.a2x:cli
