@@ -39,6 +39,7 @@ test:
     - python3 tests/testasciidoc.py update && python3 tests/testasciidoc.py run || true
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://asciidoc.org
