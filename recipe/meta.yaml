@@ -15,7 +15,7 @@ build:
     - asciidoc=asciidoc.asciidoc:cli
     - a2x=asciidoc.a2x:cli
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -36,9 +36,10 @@ test:
     - asciidoc --help
     - a2x --help
     - asciidoc doc/asciidoc.txt
-    - python3 tests/testasciidoc.py update && python3 tests/testasciidoc.py run || true
+    - python tests/testasciidoc.py update && python tests/testasciidoc.py run || true
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://asciidoc.org
