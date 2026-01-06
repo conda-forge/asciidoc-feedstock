@@ -1,0 +1,73 @@
+schema_version: 1
+
+context:
+  name: asciidoc
+  version: 10.2.1
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/${{ name }}-py/${{ name }}-py/archive/refs/tags/${{ version }}.tar.gz
+  sha256: 8e1fb9691952cc4f13357e1ef58172e566c5f88e3c44222d4a8693585f884507
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - asciidoc=asciidoc.asciidoc:cli
+      - a2x=asciidoc.a2x:cli
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+
+tests:
+  - python:
+      imports:
+        - asciidoc
+      python_version: ${{ python_min }}.*
+  - files:
+      source:
+        - doc/asciidoc.txt
+        - tests/**
+    requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip check
+      - asciidoc --help
+      - a2x --help
+      - asciidoc doc/asciidoc.txt
+      - python tests/testasciidoc.py update && python tests/testasciidoc.py run || true
+
+about:
+  license: GPL-2.0-only
+  license_file: LICENSE
+  summary: AsciiDoc is a text document format for writing things.
+  description: >
+    AsciiDoc is a text document format for writing notes, documentation,
+    articles, books, ebooks, slideshows, web pages, man pages and blogs.
+    AsciiDoc files can be translated to many formats including HTML, PDF, EPUB,
+    man page.
+
+    AsciiDoc is highly configurable: both the AsciiDoc source file syntax and
+    the backend output markups (which can be almost any type of SGML/XML markup)
+    can be customized and extended by the user.
+
+
+  homepage: https://asciidoc.org
+  repository: https://github.com/asciidoc/asciidoc-py3
+  documentation: http://asciidoc.org/userguide.html
+
+extra:
+  recipe-maintainers:
+    - carlodri
